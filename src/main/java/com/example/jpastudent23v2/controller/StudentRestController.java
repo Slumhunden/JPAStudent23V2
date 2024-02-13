@@ -17,6 +17,10 @@ public class StudentRestController {
 
     @Autowired
     StudentRepository studentRepository;
+    @GetMapping("/")
+    public String hello(){
+        return "Du er i roden";
+    }
 
     @GetMapping("/students")
     public List<Student> getStudents() {
